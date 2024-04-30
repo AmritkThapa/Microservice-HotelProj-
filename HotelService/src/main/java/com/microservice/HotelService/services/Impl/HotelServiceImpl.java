@@ -4,7 +4,7 @@ import com.microservice.HotelService.entities.Hotel;
 import com.microservice.HotelService.exceptions.ResourceNotFoundException;
 import com.microservice.HotelService.repositories.HotelRepositories;
 import com.microservice.HotelService.services.HotelService;
-import com.microservice.UserService.exceptions.ResourceNotFoundException;
+import com.microservice.HotelService.exceptions.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +26,7 @@ public class HotelServiceImpl implements HotelService {
 
     @Override
     public Hotel get(String id) {
-        return hotelRepositories.findById(id).orElseThrow(()-> new ResourceNotFoundException("Hotel with given id not found!"))
+        return hotelRepositories.findById(id).orElseThrow(()-> new ResourceNotFoundException("Hotel with given id not found!"));
 
     }
 }
