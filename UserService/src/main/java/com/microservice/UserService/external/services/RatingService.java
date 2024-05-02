@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
-@FeignClient(name = "RATING-SERVICES")
+@FeignClient(name = "RATING-SERVICE")
 public interface RatingService {
 
     //Get

@@ -2,7 +2,7 @@
 
 spring:
   application:
-    name: Rating-Services
+    name: RATING-SERVICE
   data:
     mongodb:
       uri: mongodb://localhost:27017
