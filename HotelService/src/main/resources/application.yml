@@ -4,8 +4,7 @@ server:
 
 spring:
   application:
-    name=HotelService:
-
+    name: Hotel-Services
   datasource:
     url: jdbc:postgresql://localhost:5432/microservices
     username: postgres
@@ -14,3 +13,12 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8090/eureka
+  instance:
+    prefer-ip-address: true
