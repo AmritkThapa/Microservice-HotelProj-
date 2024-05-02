@@ -12,21 +12,25 @@ import java.util.List;
 @RequiredArgsConstructor
 public class RatingServiceImpl implements RatingService {
     private final RatingRepository ratingRepository;
+    //Create
     @Override
     public Rating create(Rating rating) {
         return ratingRepository.save(rating);
     }
 
+    //Get all ratings
     @Override
     public List<Rating> getRatings() {
         return  ratingRepository.findAll();
     }
 
+    //Get ratings by User
     @Override
     public List<Rating> getRatingsByUserId(String userId) {
         return ratingRepository.findByUserId(userId);
     }
 
+    //Get ratings of Hotels
     @Override
     public List<Rating> getRatingsByHotelId(String hotelId) {
         return ratingRepository.findByHotelId(hotelId);
