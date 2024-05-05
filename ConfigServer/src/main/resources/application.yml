@@ -1,0 +1,24 @@
+
+server:
+  port: 8085
+spring:
+  application:
+    name: CONFIG-SERVER
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/AmritkThapa/Microservice-HotelProj-
+#          https://github.com/AmritkThapa/mic
+          clone-on-start: true
+
+
+#
+#eureka:
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
+#  instance:
+#    prefer-ip-address: true
